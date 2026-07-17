@@ -1,0 +1,15 @@
+---
+interface Props {
+  health: 'healthy' | 'degraded' | 'critical' | 'unknown';
+}
+const { health } = Astro.props;
+---
+<span class="inline-flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-400">
+  <span class={`w-2 h-2 rounded-full ${
+    health === 'healthy' ? 'bg-green-500' :
+    health === 'degraded' ? 'bg-amber-500' :
+    health === 'critical' ? 'bg-red-500' :
+    'bg-gray-400'
+  }`} aria-hidden="true"></span>
+  {health.charAt(0).toUpperCase() + health.slice(1)}
+</span>

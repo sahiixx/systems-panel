@@ -1,0 +1,33 @@
+---
+const domains = ["All", "Runtime & Orchestration", "Real Estate OS", "Intelligence & Memory", "Security & Governance", "Edge & Workers"];
+---
+<div class="domain-filter flex flex-wrap gap-2 mb-6" role="tablist">
+  {domains.map(domain => (
+    <button 
+      role="tab" 
+      aria-selected={false}
+      data-domain={domain.toLowerCase().replace(/\s+/g, '-')}
+      class="px-4 py-2 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+    >
+      {domain}
+    </button>
+  ))}
+</div>
+<script>
+  document.querySelectorAll('.domain-filter button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.domain-filter button').forEach(b => b.classList.remove('bg-primary-100', 'dark:bg-primary-900', 'text-primary-700', 'dark:text-primary-300'));
+      btn.classList.add('bg-primary-100', 'dark:bg-primary-900', 'text-primary-700', 'dark:text-primary-300');
+      const domain = btn.dataset.domain;
+      document.querySelectorAll('.module-card').forEach(card => {
+        if (domain === 'all' || card.dataset.domain === domain) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+  // Set "All" as default active
+  document.querySelector('.domain-filter button[data-domain="all"]').classList.add('bg-primary-100', 'dark:bg-primary-900', 'text-primary-700', 'dark:text-primary-300');
+</script>

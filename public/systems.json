@@ -1,0 +1,300 @@
+{
+  "lastUpdated": "2026-07-16T10:30:00Z",
+  "version": "1.0",
+  "meta": {
+    "commit": "a1b2c3d",
+    "deployUrl": "https://systems.sahiixx.com",
+    "maintainer": "sahil@sahiixx.com"
+  },
+  "modules": [
+    {
+      "id": "sahiixx-agency",
+      "name": "SAHIIXX Agency",
+      "domain": "Runtime & Orchestration",
+      "stage": "live",
+      "description": "Unified AI orchestration: registry → router → runner → MCP → workflows → dashboard",
+      "repo": "https://github.com/sahiixx/sahiixx-agency",
+      "deployUrl": "https://api.sahiixx.com",
+      "mcpUrl": "https://mcp.sahiixx.com",
+      "dashboardUrl": "https://dashboard.sahiixx.com",
+      "docsUrl": "https://docs.sahiixx.com/agency",
+      "metrics": {
+        "uptime": "99.7%",
+        "tasksPerDay": 1247,
+        "avgLatencyMs": 234,
+        "modulesRegistered": 47,
+        "activeWorkflows": 12,
+        "approvalsPending": 3
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-07-16T08:00:00Z",
+      "tags": ["core", "mcp", "cli", "api", "dashboard", "telegram"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-agency",
+        "docker": "ghcr.io/sahiixx/sahiixx-agency:latest",
+        "monitoring": "https://grafana.sahiixx.com/d/agency"
+      }
+    },
+    {
+      "id": "sovereign-swarm-v2",
+      "name": "Sovereign Swarm v2",
+      "domain": "Runtime & Orchestration",
+      "stage": "pilot",
+      "description": "Modular multi-agent OS with real-estate, Dubai, n8n, swarm capabilities",
+      "repo": "https://github.com/sahiixx/sovereign-swarm-v2",
+      "deployUrl": "https://swarm.sahiixx.com",
+      "metrics": {
+        "agentsActive": 12,
+        "tasksCompleted": 3841,
+        "successRate": "94.2%",
+        "avgLatencyMs": 456
+      },
+      "health": "degraded",
+      "lastDeploy": "2026-07-12T14:00:00Z",
+      "tags": ["core", "multi-agent", "real-estate", "n8n"],
+      "links": {
+        "github": "https://github.com/sahiixx/sovereign-swarm-v2",
+        "monitoring": "https://grafana.sahiixx.com/d/swarm"
+      }
+    },
+    {
+      "id": "friday-os",
+      "name": "Friday OS",
+      "domain": "Runtime & Orchestration",
+      "stage": "pilot",
+      "description": "Voice-first, memory-persistent, MCP-powered personal AI OS",
+      "repo": "https://github.com/sahiixx/friday-os",
+      "metrics": {
+        "voiceSessionsDay": 47,
+        "toolCallsDay": 312,
+        "memoryItems": 847,
+        "uptime": "99.1%"
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-06-29T10:00:00Z",
+      "tags": ["voice", "mcp", "tauri", "livekit", "ollama"],
+      "links": {
+        "github": "https://github.com/sahiixx/friday-os"
+      }
+    },
+    {
+      "id": "sahiixx-bus",
+      "name": "SAHIIXX Bus",
+      "domain": "Runtime & Orchestration",
+      "stage": "dev",
+      "description": "Unified orchestration bus for the SAHIIXX ecosystem",
+      "repo": "https://github.com/sahiixx/sahiixx-bus",
+      "metrics": {
+        "eventsPerDay": 89000,
+        "subscribers": 23,
+        "latencyP99Ms": 12,
+        "uptime": "99.9%"
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-06-29T10:00:00Z",
+      "tags": ["event-bus", "pubsub", "core"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-bus"
+      }
+    },
+    {
+      "id": "sahiix-agi",
+      "name": "SAHIIX AGI",
+      "domain": "Runtime & Orchestration",
+      "stage": "concept",
+      "description": "AGI stack: Redis + Qdrant + FastAPI multi-agent fabric",
+      "repo": "https://github.com/sahiixx/sahiix-agi",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["agi", "redis", "qdrant", "fastapi", "research"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiix-agi"
+      }
+    },
+    {
+      "id": "sahiixx-os",
+      "name": "SAHIIXX OS",
+      "domain": "Real Estate OS",
+      "stage": "live",
+      "description": "Full-stack cyberpunk command center: React + tRPC + Drizzle + Neon + Cloudflare",
+      "repo": "https://github.com/sahiixx/sahiixx-os",
+      "deployUrl": "https://os.sahiixx.com",
+      "dashboardUrl": "https://os.sahiixx.com/dashboard",
+      "metrics": {
+        "leadsIngested": 247,
+        "viewingsScheduled": 31,
+        "conversionRate": "12.5%",
+        "brokersActive": 4
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-07-15T23:59:00Z",
+      "tags": ["core", "react", "trpc", "drizzle", "neon", "cloudflare"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-os",
+        "docker": "ghcr.io/sahiixx/sahiixx-os:latest",
+        "monitoring": "https://grafana.sahiixx.com/d/os"
+      }
+    },
+    {
+      "id": "sahiix-os",
+      "name": "SAHIIX OS (Alt Stack)",
+      "domain": "Real Estate OS",
+      "stage": "pilot",
+      "description": "AI-powered real estate automation workspace (alternative stack)",
+      "repo": "https://github.com/sahiixx/sahiix-os",
+      "deployUrl": "https://sahiix.os.sahiixx.com",
+      "metrics": {
+        "leadsProcessed": 89
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-06-29T10:00:00Z",
+      "tags": ["alt-stack", "pilot"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiix-os"
+      }
+    },
+    {
+      "id": "sahiix-os-docs",
+      "name": "SAHIIXX OS Docs",
+      "domain": "Real Estate OS",
+      "stage": "live",
+      "description": "Living documentation for SAHIIXX OS",
+      "repo": "https://github.com/sahiixx/sahiix-os-docs",
+      "deployUrl": "https://docs.sahiixx.com",
+      "metrics": {
+        "pages": 47,
+        "visitsPerMonth": 1200
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-06-29T10:00:00Z",
+      "tags": ["docs", "mintlify"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiix-os-docs"
+      }
+    },
+    {
+      "id": "sahiixx-titans-memory",
+      "name": "Titans Memory",
+      "domain": "Intelligence & Memory",
+      "stage": "concept",
+      "description": "Long-term memory / Titans architecture for agent persistence",
+      "repo": "https://github.com/sahiixx/sahiixx-titans-memory",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["memory", "titans", "research"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-titans-memory"
+      }
+    },
+    {
+      "id": "sahiixx-graph-sight",
+      "name": "Graph Sight",
+      "domain": "Intelligence & Memory",
+      "stage": "concept",
+      "description": "Graph-based knowledge & sight for agent reasoning",
+      "repo": "https://github.com/sahiixx/sahiixx-graph-sight",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["graph", "knowledge", "research"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-graph-sight"
+      }
+    },
+    {
+      "id": "sahiixx-geoflow-agent",
+      "name": "GeoFlow Agent",
+      "domain": "Intelligence & Memory",
+      "stage": "concept",
+      "description": "Geo-spatial agent flows for Dubai property matching",
+      "repo": "https://github.com/sahiixx/sahiixx-geoflow-agent",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["geo", "dubai", "matching", "research"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-geoflow-agent"
+      }
+    },
+    {
+      "id": "sahiixx-clearwing",
+      "name": "Clearwing",
+      "domain": "Security & Governance",
+      "stage": "dev",
+      "description": "Safety/compliance layer for autonomous agents",
+      "repo": "https://github.com/sahiixx/sahiixx-clearwing",
+      "metrics": {
+        "policiesLoaded": 14,
+        "violationsBlocked": 234,
+        "auditEventsDay": 567
+      },
+      "health": "healthy",
+      "lastDeploy": "2026-05-18T10:00:00Z",
+      "tags": ["security", "governance", "compliance", "sandbox"],
+      "links": {
+        "github": "https://github.com/sahiixx/sahiixx-clearwing"
+      }
+    },
+    {
+      "id": "moltworker",
+      "name": "Moltworker",
+      "domain": "Edge & Workers",
+      "stage": "concept",
+      "description": "OpenClaw on Cloudflare Workers",
+      "repo": "https://github.com/sahiixx/moltworker",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["cloudflare-workers", "openclaw", "edge"],
+      "links": {
+        "github": "https://github.com/sahiixx/moltworker"
+      }
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw (Fork)",
+      "domain": "Edge & Workers",
+      "stage": "reference",
+      "description": "Personal AI assistant, any OS (reference implementation)",
+      "repo": "https://github.com/sahiixx/openclaw",
+      "metrics": {},
+      "health": "unknown",
+      "lastDeploy": null,
+      "tags": ["fork", "reference", "assistant"],
+      "links": {
+        "github": "https://github.com/sahiixx/openclaw"
+      }
+    }
+  ],
+  "summary": {
+    "total": 15,
+    "byStage": {
+      "live": 3,
+      "pilot": 3,
+      "dev": 2,
+      "concept": 5,
+      "reference": 1
+    },
+    "byDomain": {
+      "Runtime & Orchestration": 5,
+      "Real Estate OS": 3,
+      "Intelligence & Memory": 3,
+      "Security & Governance": 1,
+      "Edge & Workers": 2
+    },
+    "coreCount": 7,
+    "healthDistribution": {
+      "healthy": 9,
+      "degraded": 1,
+      "critical": 0,
+      "unknown": 5
+    },
+    "aggregateMetrics": {
+      "totalTasksPerDay": 15000,
+      "totalUptime": "99.2%",
+      "activeAgents": 47
+    }
+  }
+}

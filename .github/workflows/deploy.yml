@@ -1,0 +1,49 @@
+name: Deploy Systems Panel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/systems.json'
+      - 'src/**'
+      - 'package.json'
+      - 'astro.config.mjs'
+      - 'tailwind.config.mjs'
+      - 'tsconfig.json'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: sahiixx-systems
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update metrics (optional)
+        if: env.CF_WORKERS_KV_NAMESPACE
+        run: |
+          npm run fetch-metrics
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
