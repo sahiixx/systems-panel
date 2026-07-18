@@ -1,4 +1,3 @@
-import { APIRoute } from 'astro';
 import systemsData from '../../../public/systems.json';
 
 // This endpoint reads from Cloudflare KV (in production) or returns mock data
